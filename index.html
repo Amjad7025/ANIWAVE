@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AnimeVerse - Watch anime online">
+  <title>AnimeVerse | Watch Anime</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <a href="#" class="logo">
+      Anime<span>Verse</span>
+    </a>
+
+    <nav id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#anime">Anime</a>
+      <a href="#genres">Genres</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      ☰
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="hero-label">WELCOME TO ANIMEVERSE</p>
+        <h1>Unlimited Anime.<br><span>Infinite Adventures.</span></h1>
+        <p class="hero-text">
+          Discover exciting anime series, explore new worlds,
+          and enjoy your favorite adventures.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="primary-btn" id="heroWatchBtn">
+            ▶ Watch Now
+          </button>
+          <button class="secondary-btn" id="heroInfoBtn">
+            More Info
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search and Filters -->
+    <section class="anime-section" id="anime">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">EXPLORE</p>
+          <h2>Popular Anime</h2>
+        </div>
+
+        <button class="search-toggle" id="searchToggle">
+          🔍 Search
+        </button>
+      </div>
+
+      <div class="search-panel" id="searchPanel">
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search anime..."
+          autocomplete="off"
+        >
+      </div>
+
+      <div class="genre-list" id="genreList">
+        <button class="genre-btn active" data-genre="All">All</button>
+        <button class="genre-btn" data-genre="Action">Action</button>
+        <button class="genre-btn" data-genre="Adventure">Adventure</button>
+        <button class="genre-btn" data-genre="Romance">Romance</button>
+        <button class="genre-btn" data-genre="Comedy">Comedy</button>
+        <button class="genre-btn" data-genre="Fantasy">Fantasy</button>
+      </div>
+
+      <div class="anime-grid" id="animeGrid"></div>
+
+      <p class="empty-message" id="emptyMessage">
+        No anime found.
+      </p>
+    </section>
+
+    <!-- About -->
+    <section class="about-section" id="about">
+      <p class="section-label">ABOUT US</p>
+      <h2>Your anime journey starts here.</h2>
+      <p>
+        AnimeVerse is a demo anime-watching website created for
+        exploring anime titles and watching hosted videos.
+      </p>
+    </section>
+  </main>
+
+  <!-- Anime Details Modal -->
+  <div class="modal" id="animeModal">
+    <div class="modal-box">
+      <button class="close-btn" id="closeModal" aria-label="Close">
+        ×
+      </button>
+
+      <img id="modalImage" class="modal-image" src="" alt="Anime cover">
+
+      <div class="modal-content">
+        <p id="modalGenre" class="modal-genre"></p>
+        <h2 id="modalTitle"></h2>
+        <p id="modalMeta" class="modal-meta"></p>
+        <p id="modalDescription"></p>
+
+        <button class="primary-btn" id="modalWatchBtn">
+          ▶ Watch Episode
+        </button>
+
+        <h3>Episodes</h3>
+        <div class="episode-list" id="episodeList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Modal -->
+  <div class="modal" id="videoModal">
+    <div class="video-box">
+      <button class="close-btn" id="closeVideo" aria-label="Close">
+        ×
+      </button>
+
+      <h2 id="videoTitle">Now Playing</h2>
+
+      <video
+        id="videoPlayer"
+        controls
+        playsinline
+        preload="metadata"
+      >
+        Your browser does not support video playback.
+      </video>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 AnimeVerse. Made for anime fans.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
